@@ -33,3 +33,10 @@ class locationGenerator:
         keys = ('l1', 'l2', 'l3')
         val = (self.location['l1'], self.location['l2'], self.location['l3'])
         return dict.fromkeys(keys,val)
+
+    def getRawData(self):
+        return self.gmaps_json
+
+if __name__ == '__main__':
+    l = locationGenerator(lat=24.23223,lon=120.8)
+    print l.getRawData()
